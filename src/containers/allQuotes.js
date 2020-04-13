@@ -24,7 +24,7 @@ this.props.getAllQuotes();
 //функція яка приймає стейт і повертає шматочки стейту
 const mapStateToProps = (state) =>{
 return{
-    allQuotes: state.postList
+    allQuotes: state.allQuotes
 }
 };
 //обєкт який буде містити наші матоди(actions)

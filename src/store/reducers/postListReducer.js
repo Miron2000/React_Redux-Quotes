@@ -1,4 +1,4 @@
-import { DATA_LOADED, RANDOM_QUOTE_LOADED, ERROR_LOADING_DATA } from '../actions/postListActions';
+import { ALL_QUOTE_LOADED, RANDOM_QUOTE_LOADED, ERROR_LOADING_DATA } from '../actions/postListActions';
 
 const initStore = {
     quotes: [],
@@ -10,7 +10,7 @@ const randomQuoteObject = {
 }
 
 export const allQuotes = (initialState = initStore, action) => {
-    if (action.type === DATA_LOADED) {
+    if (action.type === ALL_QUOTE_LOADED) {
         return { ...initialState, quotes: action.payload }
     }
     if(action.type === ERROR_LOADING_DATA){
