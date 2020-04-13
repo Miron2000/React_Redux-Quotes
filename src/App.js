@@ -1,25 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Route, Switch, Link } from 'react-router-dom';
+import allQuotes from "./containers/allQuotes";
+import Nav from './components/Nav';
+import randomQuotes from './containers/randomQuotes';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav>
+        <Link to='/'>All Quotes</Link>
+        <Link to='/random'>Random Quote</Link>
+      </Nav>
+
+
+      <Switch>
+        <Route path='/' exact component={allQuotes} />
+        <Route path='/random' component={randomQuotes} />
+      </Switch>
+
+    </>
   );
 }
 
