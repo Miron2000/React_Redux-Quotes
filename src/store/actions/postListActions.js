@@ -15,7 +15,7 @@ export const getAllQuotes = () => {
             .then(res => res.json())
             .then(res => {
                 dispatch({ type:ALL_QUOTE_LOADED, payload: res })
-                console.log(res)
+                console.log(res , "ARRAY ALLQuotes")
             })
             .catch(err => dispatch({ type: ERROR_LOADING_DATA, error: err }))
     }
